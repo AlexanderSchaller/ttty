@@ -5,8 +5,10 @@ import { TerminalSettings } from '../types'
 const print = (
   content: string,
   isCommand: boolean,
+  // @ts-ignore
   scrollIntoView: boolean,
   commandContainer: HTMLElement,
+  // @ts-ignore
   input: HTMLElement,
   settings: TerminalSettings
 ) => {
@@ -16,9 +18,6 @@ const print = (
     line.append(cmd)
   }
   commandContainer.append(line)
-  if (scrollIntoView) {
-    input.scrollIntoView()
-  }
 }
 
 export default print
